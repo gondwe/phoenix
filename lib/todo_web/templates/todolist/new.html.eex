@@ -3,3 +3,10 @@
 <%= render "form.html", Map.put(assigns, :action, Routes.todolist_path(@conn, :create)) %>
 
 <span><%= link "Back", to: Routes.todolist_path(@conn, :index) %></span>
+
+<script>
+    document.getElementById('todolist_item').classList.add("form-control")
+    document.getElementsByTagName("button")[1].classList.add('btn-primary')
+    document.getElementsByTagName("button")[1].classList.add('btn')
+
+</script>

@@ -1,6 +1,6 @@
 <h1>Listing Todolist</h1>
 
-<table>
+<table class='table table-striped'>
   <thead>
     <tr>
       <th>Item</th>
@@ -16,7 +16,7 @@
       <td><%= todolist.completed %></td>
 
       <td>
-        <%= link "Show", to: Routes.todolist_path(@conn, :show, todolist) %>
+        <%=  link "Show", to: Routes.todolist_path(@conn, :show, todolist) %>
         <%= link "Edit", to: Routes.todolist_path(@conn, :edit, todolist) %>
         <%= link "Delete", to: Routes.todolist_path(@conn, :delete, todolist), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>

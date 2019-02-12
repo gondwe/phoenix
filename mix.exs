@@ -1,8 +1,6 @@
 defmodule Todo.MixProject do
   use Mix.Project
 
-  # elixir: "~> 1.5",
-
   def project do
     [
       app: :todo,
