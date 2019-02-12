@@ -1,0 +1,28 @@
+<h1>Listing Todolist</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Completed</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for todolist <- @todolist do %>
+    <tr>
+      <td><%= todolist.item %></td>
+      <td><%= todolist.completed %></td>
+
+      <td>
+        <%= link "Show", to: Routes.todolist_path(@conn, :show, todolist) %>
+        <%= link "Edit", to: Routes.todolist_path(@conn, :edit, todolist) %>
+        <%= link "Delete", to: Routes.todolist_path(@conn, :delete, todolist), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Todolist", to: Routes.todolist_path(@conn, :new) %></span>

@@ -1,0 +1,5 @@
+<h1>Edit Todolist</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.todolist_path(@conn, :update, @todolist)) %>
+
+<span><%= link "Back", to: Routes.todolist_path(@conn, :index) %></span>

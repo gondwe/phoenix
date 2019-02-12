@@ -1,0 +1,18 @@
+<h1>Show Todolist</h1>
+
+<ul>
+
+  <li>
+    <strong>Item:</strong>
+    <%= @todolist.item %>
+  </li>
+
+  <li>
+    <strong>Completed:</strong>
+    <%= @todolist.completed %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.todolist_path(@conn, :edit, @todolist) %></span>
+<span><%= link "Back", to: Routes.todolist_path(@conn, :index) %></span>

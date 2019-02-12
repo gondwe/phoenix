@@ -1,0 +1,12 @@
+<section class="phx-hero">
+  <h1 class='text-success'><%= gettext "Welcome to %{name}!", name: "Phx Tests" %></h1>
+  <p>
+  <ul class="list-unstyled">
+    <li>URI Params passing</li>
+    <li>JSON API on Postgres</li>
+    <li>Todo App using html generator</li>
+  </ul>
+  </p>
+  <hr>
+  <p class='font-weight-bold'>Names : Gondwe Benard</p>
+</section>

@@ -1,0 +1,5 @@
+<h2>Hello  <%= String.capitalize(@name) %></h2>
+<div class="clearfix">
+<hr>
+<code><%= @name %> has been passed down from the URI_STRING</code>
+<p>Kindly type { YOUR NAME  } to register change</p>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Todo · Phoenix Framework</title>
+     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/bootstrap.min.css") %>"/>
+    
+  </head>
+  <body>
+    <%# <header>
+      <section class="container">
+        
+      </section>
+    </header> %>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">AwesomeStuff <i class="fa fa-heartbeat text-warning"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Phx Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/todolist">Test TODO</a>
+            <a class="dropdown-item" href="/api/comments">API</a>
+            <a class="dropdown-item" href="/hello/Ace">URI Params</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <main role="main" class="m-5">
+      <%= unless is_nil(get_flash(@conn, :info)) do %>
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <% end %>
+      <%= unless is_nil(get_flash(@conn, :error)) do %>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <% end %>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+
+
+    <script src="<%= Routes.static_path(@conn, "/js/jquery.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/popper.min.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/bootstrap.min.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/fa.js") %>"></script>
+
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
